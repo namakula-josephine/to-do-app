@@ -1,5 +1,7 @@
-function Tasks() {
-  return <div>this is tasks page</div>;
-}
+import Topbar from "../../components/topbar/Topbar";
 
-export default Tasks;
+export default function Tasks() {
+  return (<div>
+    <Topbar />
+  </div>);
+}

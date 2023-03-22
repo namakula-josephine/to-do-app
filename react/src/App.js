@@ -1,9 +1,8 @@
-// import Tasks from "./pages/tasks/Tasks";
-import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+import Tasks from "./pages/tasks/Tasks";
 
 function App() {
   return (
-    <AccessibilityNewIcon />
+    <Tasks />
   );
 }
 
