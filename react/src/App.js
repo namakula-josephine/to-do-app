@@ -1,6 +1,8 @@
+import Tasks from "./pages/tasks/Tasks";
+
 function App() {
   return (
-    <div>hello</div>
+    <Tasks />
   );
 }
 
