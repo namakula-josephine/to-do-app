@@ -1,0 +1,13 @@
+.loginContainer{
+    display: flex;
+}
+
+.loginLeft{
+    flex: 6;
+}
+
+.loginRight{
+    flex: 6;
+    background-color: #065AD8;
+    height: 100vh;
+}
