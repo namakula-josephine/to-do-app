@@ -6,7 +6,7 @@ export default function Topbar(){
     return(
         <div className="topbarContainer">
             <div className="topbarLeft">
-                <span className="logo">Your To Do</span>
+                <img src="/assets/logo_white.png" alt="" className="logo"/>
             </div>
             <div className="topbarRight">
                 <div className="topbarIcons">
