@@ -13,6 +13,7 @@ export default function Topbar(){
                     <AddIcon />
                     <SettingsIcon />
                 </div>
+                <img src="/assets/profile_image.jpg" alt="" className="profileImage"/>
             </div>
         </div>
     )

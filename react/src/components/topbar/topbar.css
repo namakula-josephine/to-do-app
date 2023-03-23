@@ -8,6 +8,21 @@
     top: 0;
 }
 
+.topbarLeft{
+    flex: 6;
+}
+
+.topbarRight{
+    flex: 6;
+}
+
 .logo{
     width: 130px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.profileImage{
+    width: 40px;
+    height: 40px;
 }
