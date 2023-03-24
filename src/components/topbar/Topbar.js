@@ -6,14 +6,14 @@ export default function Topbar(){
     return(
         <div className="topbarContainer">
             <div className="topbarLeft">
-                <img src="/assets/logo_white.png" alt="" className="logo"/>
+                <img src="/assets/logo_white.png" alt="To do app Logo" className="logo"/>
             </div>
             <div className="topbarRight">
                 <div className="topbarIcons">
-                    <AddIcon />
-                    <SettingsIcon />
+                    <AddIcon data-testid="add-icon" />
+                    <SettingsIcon data-testid="settings-icon" />
                 </div>
-                <img src="/assets/profile_image.jpg" alt="" className="profileImage"/>
+                <img src="/assets/profile_image.jpg" alt="Profile picture" className="profileImage"/>
             </div>
         </div>
     )
