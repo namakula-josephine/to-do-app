@@ -1,9 +1,19 @@
-.leftBar{
-    flex: 3;
-    height: calc(100vh - 50px);
+.leftBar {
+  flex: 3;
+  height: calc(100vh - 50px);
+  background-color: #e6effb;
 }
 
-.leftBarWrapper{
-    padding: 20px;
-    background-color: #E6EFFB;
+.leftBarWrapper {
+  padding: 20px;
+}
+
+.leftBarList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.leftBarListItem{
+    display: flex;
 }
