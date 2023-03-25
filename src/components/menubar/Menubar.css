@@ -1,0 +1,42 @@
+.menuBar {
+  flex: 3;
+  height: calc(100vh - 50px);
+  background-color: #e6effb;
+}
+
+.menuBarWrapper {
+  padding: 20px;
+  padding-bottom: 40px;
+  border-bottom: 0.5px solid #C0C0C0;
+}
+
+.menuBarList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menuBarListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menuBarIcon{
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.menuBarListItemCounter{
+  position: absolute;
+  right: 0px;
+}
+
+.menuBarActive{
+  background-color: #CDDEF7;
+  width: 100%;
+}
+
