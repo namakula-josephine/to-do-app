@@ -5,39 +5,44 @@
 }
 
 .menuBarWrapper {
-  padding: 20px;
+  width: 100%;
   padding-bottom: 40px;
-  border-bottom: 0.5px solid #C0C0C0;
+  border-bottom: 0.5px solid #c0c0c0;
 }
 
-.menuBarList{
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.menuBarList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.menuBarListItem{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative;
-    font-size: 14px;
-    cursor: pointer;
-    
+.menuBarListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.menuBarIcon{
+.menuBarListItem:hover {
+  background-color: #cddef7;
+  width: 100%;
+}
+
+.menuBarIcon {
   margin-right: 10px;
-  font-size: 20px;
+  margin-left: 20px;
+  font-size: 20px !important;
   color: #333;
 }
 
-.menuBarListItemCounter{
+.menuBarListItemCounter {
   position: absolute;
-  right: 0px;
+  right: 20px;
 }
 
-.menuBarActive{
-  background-color: #CDDEF7;
+.menuBarListActive {
+  background-color: #cddef7;
+  width: 100%;
 }
-
