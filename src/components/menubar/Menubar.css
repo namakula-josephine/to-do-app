@@ -4,49 +4,35 @@
   background-color: #e6effb;
 }
 
-.menuBarWrapper {
-  width: 100%;
-  padding-bottom: 40px;
-  border-bottom: 0.5px solid #c0c0c0;
-}
-
 .menuBarList {
   padding: 0;
   margin: 0;
   list-style: none;
+  border-bottom: 0.5px solid #c0c0c0;
 }
 
 .menuBarListItem {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  position: relative;
   font-size: 14px;
   cursor: pointer;
+  padding: 10px 20px;
 }
 
 .menuBarListItem:hover {
-  background-color: #cddef7;
-}
-
-.menuBarIcon {
-  margin-right: 10px;
-  margin-left: 20px;
-  font-size: 20px !important;
-  color: #333;
-}
-
-.menuBarListItemCounter {
-  position: absolute;
-  right: 20px;
+  background-color: #dce8f9;
 }
 
 .menuBarListActive {
   background-color: #cddef7;
 }
 
-.menuBarListItem-inner{
-  padding: 10px 0 10px 0;
-  display: flex;
-  align-items: center;
+.menuBarIcon {
+  margin-right: 10px;
+  font-size: 20px !important;
+  color: #333;
+}
+
+ul li span:nth-child(2) {
+  width: 100%;
 }
