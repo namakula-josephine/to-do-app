@@ -1,6 +1,6 @@
 import "./Menubar.css";
 import HomeIcon from "@mui/icons-material/Home";
-import GradeIcon from '@mui/icons-material/Grade';
+import GradeIcon from "@mui/icons-material/Grade";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -11,9 +11,11 @@ function Menubar() {
     <div className="menuBar">
       <ul className="menuBarList">
         <li className="menuBarListItem menuBarListActive">
-          <HomeIcon className="menuBarIcon" />
-          <span className="menuBarListItemText">All Tasks</span>
-          <span className="menuBarListItemCounter">12</span>
+          <div className="menuBarListItem-inner">
+            <HomeIcon className="menuBarIcon" />
+            <span className="menuBarListItemText">All Tasks</span>
+            <span className="menuBarListItemCounter">12</span>
+          </div>
         </li>
         <li className="menuBarListItem">
           <GradeIcon className="menuBarIcon" />
