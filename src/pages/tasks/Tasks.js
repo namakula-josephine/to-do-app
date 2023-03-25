@@ -1,5 +1,5 @@
 import Centerbar from "../../components/centerbar/Centerbar";
-import Leftbar from "../../components/leftbar/Leftbar";
+import Menubar from "../../components/menubar/Menubar";
 import Rightbar from "../../components/rightbar/Rightbar";
 import Topbar from "../../components/topbar/Topbar";
 import "./tasks.css"
@@ -9,7 +9,7 @@ export default function Tasks() {
     <>
       <Topbar />
       <div className="tasksContainer">
-        <Leftbar />
+        <Menubar />
         <Centerbar />
         <Rightbar />
       </div>
