@@ -11,11 +11,9 @@ function Menubar() {
     <div className="menuBar">
       <ul className="menuBarList">
         <li className="menuBarListItem menuBarListActive">
-          <div className="menuBarListItem-inner">
-            <HomeIcon className="menuBarIcon" />
-            <span className="menuBarListItemText">All Tasks</span>
-            <span className="menuBarListItemCounter">12</span>
-          </div>
+          <HomeIcon className="menuBarIcon" />
+          <span className="menuBarListItemText">All Tasks</span>
+          <span className="menuBarListItemCounter">12</span>
         </li>
         <li className="menuBarListItem">
           <GradeIcon className="menuBarIcon" />
