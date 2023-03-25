@@ -11,7 +11,7 @@ test("logo should be rendered", () => {
 
 test("profile picture should be rendered", () => {
     render(<Topbar />);
-    const profilePicEl = screen.getByAltText(/Profile picture/i);
+    const profilePicEl = screen.getByAltText(/to do app user/i);
     expect(profilePicEl).toBeInTheDocument();
 })
 
