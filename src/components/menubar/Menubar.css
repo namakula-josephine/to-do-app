@@ -21,15 +21,22 @@
     align-items: center;
     margin-bottom: 20px;
     position: relative;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .menuBarIcon{
   margin-right: 10px;
+  font-size: 22px;
 }
 
 .menuBarListItemCounter{
   position: absolute;
-  right: 20px;
+  right: 0px;
 }
 
+.menuBarActive{
+  background-color: #CDDEF7;
+  width: 100%;
+}
 
