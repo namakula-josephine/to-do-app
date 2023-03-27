@@ -5,13 +5,13 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 
 function Menubar() {
   return (
     <div className="menuBar">
       <div className="searchBar">
-        <SearchIcon className="searchIcon"/>
+        <SearchIcon className="searchIcon" />
         <input placeholder="Search for tasks" className="searchInput" />
       </div>
       <ul className="menuBarList">
@@ -26,7 +26,10 @@ function Menubar() {
           <span className="menuBarListItemCounter">2</span>
         </li>
         <li className="menuBarListItem">
-          <CalendarTodayIcon className="menuBarIcon" />
+          <div className="todayCalendarIcon">
+            <CalendarTodayIcon className="menuBarIcon" />
+            <span className="todayCounter">25</span>
+          </div>
           <span className="menuBarListItemText">Today</span>
           <span className="menuBarListItemCounter">4</span>
         </li>
