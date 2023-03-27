@@ -6,7 +6,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import SearchIcon from "@mui/icons-material/Search";
-import Calendar from "../calendar/Calendar";
+// import Calendar from "../calendar/Hello";
 
 function Menubar() {
   return (
@@ -50,7 +50,7 @@ function Menubar() {
           <span className="menuBarListItemCounter">2</span>
         </li>
       </ul>
-      <Calendar />
+      {/* <Hello /> */}
     </div>
   );
 }
