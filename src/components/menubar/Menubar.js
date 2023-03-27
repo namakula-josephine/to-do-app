@@ -5,10 +5,15 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
+import SearchIcon from '@mui/icons-material/Search';
 
 function Menubar() {
   return (
     <div className="menuBar">
+      <div className="searchBar">
+        <SearchIcon />
+        <input placeholder="Search for tasks" className="searchInput" />
+      </div>
       <ul className="menuBarList">
         <li className="menuBarListItem menuBarListActive">
           <HomeIcon className="menuBarIcon" />
