@@ -11,7 +11,7 @@ function Menubar() {
   return (
     <div className="menuBar">
       <div className="searchBar">
-        <SearchIcon />
+        <SearchIcon className="searchIcon"/>
         <input placeholder="Search for tasks" className="searchInput" />
       </div>
       <ul className="menuBarList">
