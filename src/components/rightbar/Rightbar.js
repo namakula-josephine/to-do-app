@@ -1,7 +1,7 @@
 import "./Rightbar.css";
 
 function Rightbar() {
-  return <div className="rightBar">click on the Task Title to view details</div>;
+  return <div className="rightBar">click</div>;
 }
 
 export default Rightbar;
