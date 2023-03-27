@@ -63,3 +63,16 @@
 ul li span:nth-child(2) {
   width: 100%;
 }
+
+.todayCalendarIcon{
+  position: relative;
+}
+
+.todayCounter{
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #333;
+}
