@@ -127,4 +127,15 @@ ul li span:nth-child(2) {
 .goalsListItem{
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
+
+.goalsListCheckIcon{
+  font-size: 18px !important;
+  color: #333;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+

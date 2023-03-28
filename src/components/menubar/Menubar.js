@@ -63,15 +63,19 @@ function Menubar() {
       <ul className="goalsList">
         <li className="goalsListItem">
           <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
-          <span className="menuBarListItemText">Understanding Django</span>
+          <span className="goalListItemText">Understanding Django</span>
         </li>
         <li className="goalsListItem">
           <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
-          <span className="menuBarListItemText">Understanding html & css</span>
+          <span className="goalListItemText">Understanding html & css</span>
         </li>
         <li className="goalsListItem">
           <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
-          <span className="menuBarListItemText">Getting a wife</span>
+          <span className="goalListItemText">Start learning French</span>
+        </li>
+        <li className="goalsListItem">
+          <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
+          <span className="goalListItemText">Getting a wife</span>
         </li>
       </ul>
     </div>
