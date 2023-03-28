@@ -7,6 +7,8 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import SearchIcon from "@mui/icons-material/Search";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
 function Menubar() {
   return (
@@ -51,10 +53,27 @@ function Menubar() {
         </li>
       </ul>
       <div className="goals">
-        <EmojiEventsIcon className="goalIcon"/>
-        <span className="goalText">Week's Goals</span>
+        <EmojiEventsIcon className="goalIcon" />
+        <span className="goalText">
+          Week's Goals
+          <ExpandLessIcon className="goalLessIcon" />
+        </span>
         <button className="goalsButton">Add</button>
       </div>
+      <ul className="goalsList">
+        <li className="goalsListItem">
+          <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
+          <span className="menuBarListItemText">Understanding Django</span>
+        </li>
+        <li className="goalsListItem">
+          <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
+          <span className="menuBarListItemText">Understanding html & css</span>
+        </li>
+        <li className="goalsListItem">
+          <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
+          <span className="menuBarListItemText">Getting a wife</span>
+        </li>
+      </ul>
     </div>
   );
 }
