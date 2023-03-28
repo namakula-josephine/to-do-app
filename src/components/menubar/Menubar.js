@@ -6,7 +6,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import SearchIcon from "@mui/icons-material/Search";
-// import Calendar from "../calendar/Hello";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 function Menubar() {
   return (
@@ -50,7 +50,11 @@ function Menubar() {
           <span className="menuBarListItemCounter">2</span>
         </li>
       </ul>
-      {/* <Hello /> */}
+      <div className="goals">
+        <EmojiEventsIcon />
+        <span>Goals</span>
+        <button className="goalsButton">Add</button>
+      </div>
     </div>
   );
 }
