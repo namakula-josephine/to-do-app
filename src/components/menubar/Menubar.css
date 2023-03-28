@@ -76,3 +76,66 @@ ul li span:nth-child(2) {
   font-weight: 700;
   color: #333;
 }
+
+.goals{
+  display: flex;
+  margin: 30px 20px 10px 20px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.goalText{
+  color: #333;
+  position: relative;
+  cursor: pointer;
+}
+
+.goalIcon{
+  margin-right: 5px;
+  font-size: 20px !important;
+  color: #333;
+}
+
+.goalLessIcon{
+  margin-left: 1px;
+  font-size: 20px !important;
+  color: #333;
+  position: absolute;
+  top: 1px;
+}
+
+.goalsButton{
+  border: none;
+  background-color: #b4cef3;
+  font-size: 14px;
+  padding: 4px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 110px;
+}
+
+.goalsButton:hover{
+  background-color: #cddef7;
+}
+
+.goalsList{
+  padding: 0 20px 0 30px;
+  margin: 0;
+  list-style: none;
+}
+
+.goalsListItem{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.goalsListCheckIcon{
+  font-size: 18px !important;
+  color: #333;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
