@@ -1,3 +1,17 @@
 .rightBar{
     flex: 3;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 0vh;
+    margin-left: 39px;
+
 }
+.clickIcon {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+  }
