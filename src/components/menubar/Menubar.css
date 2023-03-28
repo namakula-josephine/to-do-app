@@ -86,10 +86,24 @@ ul li span:nth-child(2) {
 
 .goalText{
   width: 100%;
+  color: #333;
 }
 
 .goalIcon{
   margin-right: 5px;
   font-size: 20px !important;
   color: #333;
+}
+
+.goalsButton{
+  border: none;
+  background-color: #b4cef3;
+  font-size: 14px;
+  padding: 4px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.goalsButton:hover{
+  background-color: #cddef7;
 }
