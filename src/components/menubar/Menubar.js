@@ -51,8 +51,8 @@ function Menubar() {
         </li>
       </ul>
       <div className="goals">
-        <EmojiEventsIcon />
-        <span>Goals</span>
+        <EmojiEventsIcon className="goalIcon"/>
+        <span className="goalText">Week's Goals</span>
         <button className="goalsButton">Add</button>
       </div>
     </div>

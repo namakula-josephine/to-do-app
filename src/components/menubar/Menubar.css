@@ -81,4 +81,15 @@ ul li span:nth-child(2) {
   display: flex;
   padding: 20px;
   align-items: center;
+  font-size: 16px;
+}
+
+.goalText{
+  width: 100%;
+}
+
+.goalIcon{
+  margin-right: 5px;
+  font-size: 20px !important;
+  color: #333;
 }
