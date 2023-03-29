@@ -13,7 +13,7 @@ export default function Topbar(){
                     <AddIcon data-testid="add-icon" />
                     <SettingsIcon data-testid="settings-icon" />
                 </div>
-                <img src="/assets/pofile_pic.jpg" alt="This is your space" className="profileImage"/>
+                <img src="/assets/pofile_pic.jpg" alt="To do app user" className="profileImage"/>
             </div>
         </div>
     )
