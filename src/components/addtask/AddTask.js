@@ -8,12 +8,6 @@ export default function AddTask() {
         <AddIcon className="addTaskTitleIcon"/>
         <span className="addTaskTitleText">Add New Task</span>
       </div>
-      <div className="addTaskForm">
-        <div className="addTaskFormTitle">Form Title</div>
-        <div className="addTaskFormDescription">Form Description</div>
-        <div className="addTaskFormSchedule">Form Description</div>
-      </div>
-      <button className="addTaskButton">Button</button>
     </div>
   );
 }
