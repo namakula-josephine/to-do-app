@@ -8,7 +8,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import SearchIcon from "@mui/icons-material/Search";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 
 function Menubar() {
   return (
@@ -54,11 +54,13 @@ function Menubar() {
       </ul>
       <div className="goals">
         <EmojiEventsIcon className="goalIcon" />
-        <span className="goalText">
-          Week's Goals
-          <ExpandLessIcon className="goalLessIcon" />
-        </span>
-        <button className="goalsButton">Add</button>
+        <div className="goalTextButtonWrapper">
+          <span className="goalText">
+            Week's Goals
+            <ExpandLessIcon className="goalLessIcon" />
+          </span>
+          <button className="goalsButton">Add</button>
+        </div>
       </div>
       <ul className="goalsList">
         <li className="goalsListItem">
@@ -75,7 +77,7 @@ function Menubar() {
         </li>
         <li className="goalsListItem">
           <RadioButtonUncheckedIcon className="goalsListCheckIcon" />
-          <span className="goalListItemText">Getting a wife</span>
+          <span className="goalListItemText">Writting a Blog article</span>
         </li>
       </ul>
     </div>
