@@ -1,7 +1,6 @@
 .centerBar{
     flex: 6;
     border-right: 0.5px solid #C0C0C0;
-<<<<<<< HEAD
 }
 
 .menuBarIconn {
@@ -12,10 +11,7 @@
   }
 
 .menuBarListItemTextt {
-    padding-left: 4px;
+    padding-left: 4px;   
     margin-bottom: 4px;
     text-align: center;
-=======
-    padding: 20px;
->>>>>>> 72cf8747c2ea22c42831449178f74934c1de26f8
 }
