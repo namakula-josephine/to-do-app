@@ -15,3 +15,49 @@
     margin-bottom: 4px;
     text-align: center;
 }
+
+.Addtasks {
+    padding-left:10px;
+    margin-top: 10px;
+    padding-right: 8px;
+}
+
+.Addatask {
+    padding-left: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    height: 40px;
+    width: 622px;
+    text-align: left;
+    background-color: white;
+    border-radius: 6px;
+    border-color: rgb(159, 158, 158);
+    border-width: 0.5px;
+    
+}
+
+.Addatasks {
+    padding-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    height: 40px;
+    width: 622px;
+    text-align: left;
+    background-color: white;
+    border-radius: 6px;
+    border-color: rgb(159, 158, 158);
+    border-width: 0.5px;
+}
+
+.AddAtasks {
+    padding-left: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    height: 40px;
+    width: 622px;
+    text-align: left;
+    background-color: white;
+    border-radius: 6px;
+    border-color: rgb(159, 158, 158);
+    border-width: 0.5px;
+}

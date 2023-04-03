@@ -11,17 +11,17 @@ function Centerbar() {
   return <div className="centerBar">
       <HomeIcon className="menuBarIconn"/>
       <span className="menuBarListItemTextt">All Tasks</span>
-      <div>
-        <button>Add A Task</button>
+      <div className="Addatasks" >
+        <button className="AddAtasks" >Add A Task.</button>
+      </div>
+      <div className="Addtasks" >
+        <button className="Addatask" >Programming C</button>
+      </div>
+      <div className="Addtasks" >
+        <button className="Addatask">Programming Python</button>
         </div>
-      <div>
-        <button>Programming C</button>
-        </div>
-      <div>
-        <button>Programming Python</button>
-        </div>
-      <div>
-        <button>Reading Probability</button>
+      <div className="Addtasks">
+        <button className="Addatask">Reading Probability</button>
         </div>
   </div>;
 }
