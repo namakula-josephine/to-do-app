@@ -1,5 +1,25 @@
 .centerBar{
     flex: 6;
     border-right: 0.5px solid #C0C0C0;
+<<<<<<< HEAD
     font-family: 'Courier New', Courier, monospace;
+=======
+<<<<<<< HEAD
+}
+
+.menuBarIconn {
+    margin-right: 10px;
+    color: #333;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+.menuBarListItemTextt {
+    padding-left: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+=======
+    padding: 20px;
+>>>>>>> 72cf8747c2ea22c42831449178f74934c1de26f8
+>>>>>>> main
 }
