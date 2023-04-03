@@ -15,10 +15,10 @@ function Centerbar() {
         <button className="AddAtasks" >Add A Task.</button>
       </div>
       <div className="Addtasks" >
-        <button className="Addatask" >Programming C</button>
+        <button className="Addatask" >Programming-C</button>
       </div>
       <div className="Addtasks" >
-        <button className="Addatask">Programming Python</button>
+        <button className="Addatask">Programming my Python</button>
         </div>
       <div className="Addtasks">
         <button className="Addatask">Reading Probability</button>
