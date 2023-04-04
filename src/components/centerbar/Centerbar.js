@@ -12,18 +12,14 @@ function Centerbar() {
   <div className="centerBar">
       <HomeIcon className="menuBarIconn"/>
       <span className="menuBarListItemTextt">All Tasks</span>
-      <div className="Addatasks" >
-        <button className="AddAtasks" >Add A Task.</button>
+      <div className="AddTask" >
+        <button className="AddTask" >Add A Task.</button>
       </div>
       <div className="Addtasks" >
         <button className="Addatask" >Programming C</button>
-      </div>
-      <div className="Addtasks" >
         <button className="Addatask">Programming Python</button>
-        </div>
-      <div className="Addtasks">
         <button className="Addatask">Reading Probability</button>
-        </div>
+      </div>
   </div>)
   }
 
