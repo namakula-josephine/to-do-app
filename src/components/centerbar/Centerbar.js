@@ -8,15 +8,23 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 
 function Centerbar() {
-  return <div className="centerBar">
+  return(
+  <div className="centerBar">
       <HomeIcon className="menuBarIconn"/>
       <span className="menuBarListItemTextt">All Tasks</span>
-    </div>;
-  return (
-    <div className="centerBar">
-      <AddTask />
-    </div>
-  );
-}
+      <div className="Addatasks" >
+        <button className="AddAtasks" >Add A Task.</button>
+      </div>
+      <div className="Addtasks" >
+        <button className="Addatask" >Programming C</button>
+      </div>
+      <div className="Addtasks" >
+        <button className="Addatask">Programming Python</button>
+        </div>
+      <div className="Addtasks">
+        <button className="Addatask">Reading Probability</button>
+        </div>
+  </div>)
+  }
 
 export default Centerbar;
