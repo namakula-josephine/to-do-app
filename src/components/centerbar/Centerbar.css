@@ -37,8 +37,10 @@
 }
 
 .AddTask {
-    padding-left: 10px;
+    padding-left: 20px;
     margin-top: 5px;
+    color: #065ad8;
+    font-weight: bold;
     cursor: pointer;
     height: 40px;
     width: 622px;
@@ -47,4 +49,12 @@
     border-radius: 6px;
     border-color: rgb(159, 158, 158);
     border-width: 0.5px
+}
+
+.AdTaskk {
+    padding-left: 10px;
+}
+
+.buttonStyle {
+    background-color: #065ad8;
 }
