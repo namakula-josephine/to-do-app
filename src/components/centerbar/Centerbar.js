@@ -20,7 +20,7 @@ function Centerbar() {
       </div>
       <div className="Addtasks" >
         <button className="Addatask" style={buttonStyle}>Programming C</button>
-        <button className="Addatask" style={buttonStyle}>Programming Python</button>
+        <button className="Addatask" style={buttonStyle}>Programming Python for beginers</button>
         <button className="Addatask" style={buttonStyle}>Reading Probability</button>
       </div>
   </div>)
