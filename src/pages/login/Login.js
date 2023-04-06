@@ -1,10 +1,11 @@
 import "./login.css";
-import Loginpage1 from "../../components/loginpage1/Loginpage1";
+import Loginpage1 from "../../components/loginpage1/Loginpage1.js";
 //import Loginpage2 from "../../components/loginpage2/Loginpage2";
 import sliderImage from '../../assets/slider1.png';
 //import Loginpage3 from "../../components/loginpage3/Loginpage3";
 //import Loginpage3 from "../../components/loginpage3/Loginpage3";
 //import Loginpage6 from "../../components/loginpage6/Loginpage6";
+
 
 export default function Login(){
     return (
