@@ -1,0 +1,81 @@
+.logo {
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+.formWrapper{
+    display: flex;
+    height: calc(100vh - 120px);
+    align-items: center;
+    justify-content: center;
+}
+  
+.formWrapper{
+  display: flex;
+  height: calc(100vh - 120px);
+  align-items: center;
+  justify-content: center;
+}
+
+  
+  .Login-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+  
+  .formButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #065ad8;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .formButton:hover {
+    background-color: #1f6bdc;
+  }
+  
+  .formButton > .MuiSvgIcon-root {
+    font-size: 24px;
+  }
+
+  .formLinks {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .ForgotPasswordLink,
+  .CreateAccountLink {
+    background: none;
+    border: none;
+    color: #065ad8;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .ForgotPasswordLink:hover,
+  .CreateAccountLink:hover {
+    text-decoration: underline;
+  }
+  .CreateAccountLink {
+    margin-left: 8px;
+  }
+  
