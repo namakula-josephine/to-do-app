@@ -34,6 +34,22 @@
     
 }
 
+.AddTask {
+    padding-left: 20px;
+    margin-top: 5px;
+    color: #065ad8;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    width: 622px;
+    text-align: left;
+    background-color: white;
+    border-radius: 6px;
+    border-color: rgb(159, 158, 158);
+    border-width: 0.5px
+}
+
+
 
 
 
