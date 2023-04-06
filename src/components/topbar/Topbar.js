@@ -15,8 +15,6 @@ export default function Topbar(){
                     <SettingsIcon data-testid="settings-icon" />
                     
                 </div>
-                
-                <img src="/assets/profile_image.jpg" alt="to do app user" className="profileImage"/>
             </div>
         </div>
     )
