@@ -8,3 +8,8 @@
     margin-top: 10px;
     margin-left: 5px;
   }
+  .menuBarListItemTextt {
+    padding-left: 4px;   
+    margin-bottom: 4px;
+    text-align: center;
+}
