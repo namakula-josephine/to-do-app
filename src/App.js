@@ -1,10 +1,9 @@
-// import Login from "./pages/login/Login";
-import Tasks from "./pages/tasks/Tasks";
+import Login from "./pages/login/Login";
+
 
 function App() {
   return (
-    // <Login />
-    <Tasks />
+    <Login/>
   );
 }
 

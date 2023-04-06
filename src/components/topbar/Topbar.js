@@ -11,13 +11,12 @@ export default function Topbar(){
             <div className="topbarRight">
                 <div className="topbarIcons">
                     <AddIcon data-testid="add-icon" />
+
                     <SettingsIcon data-testid="settings-icon" />
+                    
                 </div>
-<<<<<<< HEAD
-                <img src="/assets/pofile_pic.jpg" alt="To do app user" className="profileImage"/>
-=======
+                
                 <img src="/assets/profile_image.jpg" alt="to do app user" className="profileImage"/>
->>>>>>> 72cf8747c2ea22c42831449178f74934c1de26f8
             </div>
         </div>
     )
