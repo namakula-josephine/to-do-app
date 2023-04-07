@@ -1,28 +1,35 @@
 import "./login.css";
-import Loginpage1 from "../../components/loginpage1/Loginpage1";
-//import Loginpage2 from "../../components/loginpage2/Loginpage2";
+import Welcomepage from "../../components/welcomepage/Welcomepage.js";
+//import Signuppage from "../../components/signuppage/signuppage";
 import sliderImage from '../../assets/slider1.png';
-//import Loginpage3 from "../../components/loginpage3/Loginpage3";
-//import Loginpage3 from "../../components/loginpage3/Loginpage3";
-//import Loginpage6 from "../../components/loginpage6/Loginpage6";
+//import Withemail from "../../components/withemail/Withemail";
+//import Withphone from "../../components/withphone/Withphone";
+//import Emailophone from "../../components/emailophone/Emailophone";
+
 
 export default function Login(){
     return (
         <div className="loginContainer">
             <div className="loginLeft">
-                <Loginpage1 />  
-                 {/* <Loginpage2 />  */}
-                 {/* <Loginpage3 /> */}
-                 {/* <Loginpage6 /> */}
+                <Welcomepage />  
+                 {/* <Signuppage />  */}
+                 {/* <Withphone /> */}
+                 {/* <Emailophone /> */}
             </div>
             <div className="loginRight">
-            <img src={sliderImage} alt="slider" width ='500' height='300' style={{display: "block"}}></img>
-            <div className="definition">
-            <br></br>
-            <h1>Welcome to our todo list app</h1>
-                <p>Lorem ipsum dol</p>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <img src={sliderImage} alt="slider" width ='500' height='300'></img>
+                <br />
+                <div className="definition">
+                <h3>Your remainder here</h3>
+                <p>Lorem Ipsum has been the dummy</p>
+                </div>
                 </div>
             </div>
         </div>
-    )
+    );
+
 }
+
+
+
