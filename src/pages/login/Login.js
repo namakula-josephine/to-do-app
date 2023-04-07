@@ -17,15 +17,19 @@ export default function Login(){
                  {/* <Emailophone /> */}
             </div>
             <div className="loginRight">
-            <div style={{display: "flex", flexDirection: "column", alignItems: "center" }}
-            <img src={sliderImage} alt="slider" width ='500' height='300'></img>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <img src={sliderImage} alt="slider" width ='500' height='300'></img>
                 <br />
+                <div className="definition">
                 <h3>Your remainder here</h3>
-                <p>Start now</p>
+                <p>Lorem Ipsum has been the dummy</p>
+                </div>
+                </div>
             </div>
-            </div>
-            
         </div>
     );
 
 }
+
+
+

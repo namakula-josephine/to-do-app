@@ -8,8 +8,8 @@
 .formWrapper{
     display: flex;
     height: calc(100vh - 120px);
-    align-items: center;
-    justify-content: center;
+   
+    
 }
   
 .formWrapper{
@@ -21,14 +21,18 @@
 
   
   .Login-heading {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 64px;
+    width: 320px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 36px;
+    font-size: 24px;
     margin-bottom: 32px;
+    
+  }
+
+  .btnText {
+    font-size: 16px;
   }
   
   .formButton {
@@ -36,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 16px 10px;
+    padding: 14px 28px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
