@@ -1,11 +1,13 @@
 import { Fragment } from "react";
-import "./Loginpage6.css";
+import "./loginpage6.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import logo_blue from '../../assets/logo_blue.png';
+
 
 function Loginpage6() {
   return (
     <Fragment>
-      <img src="/assets/logo_blue.png" alt="To do app Logo" className="logo" />
+    <img src={logo_blue} alt="To do app Logo" className="logo" />
       <div className="formWrapper">
         <div className="form">
           <div className="formItem">

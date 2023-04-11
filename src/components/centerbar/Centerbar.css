@@ -2,13 +2,12 @@
     flex: 6;
     border-right: 0.5px solid #C0C0C0;
 }
-
 .menuBarIconn {
     margin-right: 10px;
     color: #333;
     margin-top: 10px;
     margin-left: 5px;
-  }
+}
 
 .menuBarListItemTextt {
     padding-left: 4px;   
@@ -21,7 +20,6 @@
     margin-top: 30px;
     padding-right: 8px;
 }
-
 .Addatask {
     padding-left: 20px;
     margin-top: 2px;
@@ -39,15 +37,15 @@
 .AddTask {
     padding-left: 20px;
     margin-top: 5px;
-    color: #065ad8;
+    color: #456fae;
     font-weight: bold;
     cursor: pointer;
     height: 40px;
-    width: 622px;
+    width: 623px;
     text-align: left;
-    background-color: white;
-    border-radius: 6px;
-    border-color: rgb(159, 158, 158);
+    background-color: rgb(243, 236, 236);
+    border-radius: 6.5px;
+    border-color: rgb(206, 190, 190);
     border-width: 0.5px
 }
 
@@ -58,6 +56,7 @@
 .buttonStyle {
     background-color: #065ad8;
 }
+
 
 .missedtask {
     width: 40px;

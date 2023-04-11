@@ -11,7 +11,9 @@ export default function Topbar(){
             <div className="topbarRight">
                 <div className="topbarIcons">
                     <AddIcon data-testid="add-icon" />
+
                     <SettingsIcon data-testid="settings-icon" />
+                    
                 </div>
             </div>
         </div>

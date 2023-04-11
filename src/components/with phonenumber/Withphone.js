@@ -1,11 +1,12 @@
 import { Fragment } from "react";
-import "./Loginpage2.css";
+import "./Loginpage3.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import logo_blue from '../../assets/logo_blue.png';
 
-function Loginpage2() {
+function Loginpage3() {
   return (
     <Fragment>
-      <img src="/assets/logo_blue.png" alt="To do app Logo" className="logo" />
+      <img src={logo_blue} alt="To do app Logo" className="logo" />
       <div className="formWrapper">
         <div className="form">
           <div className="formItem">
@@ -33,4 +34,4 @@ function Loginpage2() {
     </Fragment>
   );
 }
-export default Loginpage2;
+export default Loginpage3;
