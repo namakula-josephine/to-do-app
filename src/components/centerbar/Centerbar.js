@@ -25,7 +25,7 @@ function Centerbar() {
       </div>
       <div>
       <img src="/assets/missedtaskimg.png" alt="Missed task" className="missedtask"/>
-      <span className="missingtask">Missed Tasks.</span>
+      <span className="missedtask">Missed Tasks.</span>
       </div>
   </div>)
   }
