@@ -23,6 +23,10 @@ function Centerbar() {
         <button className="Addatask" style={buttonStyle}>Programming Python for beginers</button>
         <button className="Addatask" style={buttonStyle}>Reading Probability</button>
       </div>
+      <div>
+      <img src="/assets/missedtaskimg.png" alt="Missed task" className="missedtask"/>
+      <span className="missingtask">Missed Tasks.</span>
+      </div>
   </div>)
   }
 
