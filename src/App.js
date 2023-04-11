@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+import Tasks from "./pages/tasks/Tasks";
+=======
 import Login from "./pages/login/Login";
+
+>>>>>>> main
 
 
 function App() {
   return (
-    <Login/>
+<<<<<<< HEAD
+    //<login/>
+    <Tasks />
+=======
+    <login/>
+    //<tasks />
+>>>>>>> main
   );
 }
 
