@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-import Tasks from "./pages/tasks/Tasks";
-=======
-import Login from "./pages/login/Login";
 
->>>>>>> main
+import Tasks from "./pages/tasks/Tasks";
+
 
 
 function App() {
   return (
-<<<<<<< HEAD
+
     //<login/>
-    <Tasks />
-=======
-    <login/>
-    //<tasks />
->>>>>>> main
-  );
+    <Tasks />)
+
 }
 
 export default App;
