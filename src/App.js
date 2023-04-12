@@ -1,14 +1,14 @@
-
-import Tasks from "./pages/tasks/Tasks";
+import Login from "./pages/login/Login";
+//import Tasks from "./pages/tasks/Tasks";
 
 
 
 function App() {
   return (
 
-    //<login/>
-    <Tasks />)
-
+    <Login/>
+   // <Tasks />)
+  )
 }
 
 export default App;

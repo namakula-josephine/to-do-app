@@ -1,20 +1,26 @@
 import "./login.css";
-import Welcomepage from "../../components/welcomepage/Welcomepage.js";
-//import Signuppage from "../../components/signuppage/signuppage";
+//import Welcomepage from "../../components/welcomepage/Welcomepage.js";
+//import Signuppage from "../../components/signuppage/Signuppage";
 import sliderImage from '../../assets/slider1.png';
-//import Withemail from "../../components/withemail/Withemail";
-//import Withphone from "../../components/withphone/Withphone";
-//import Emailophone from "../../components/emailophone/Emailophone";
+//import Youremail from "../../components/youremail/Youremail";
+//import Yourphone from "../../components/yourphone/Yourphone";
+//import Newpassword from "../../components/newpassword/Newpassword";
+//import Resetcode from "../../components/resetcode/Resetcode";
+import Resetwith from "../../components/resetwith/Resetwith";
+//import Resetcode from "../../components/resetcode/Resetcode";
 
 
 export default function Login(){
     return (
         <div className="loginContainer">
             <div className="loginLeft">
-                <Welcomepage />  
-                 {/* <Signuppage />  */}
-                 {/* <Withphone /> */}
-                 {/* <Emailophone /> */}
+                {/* <Welcomepage />  */}
+                  {/* <Signuppage />   */}
+                 {/* <Newpassword />  */}
+                 {/* <Youremail />   */}
+                 {/* <Resetcode />  */}
+                  {/* <Yourphone />  */}
+                  <Resetwith />  
             </div>
             <div className="loginRight">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center" }}>
