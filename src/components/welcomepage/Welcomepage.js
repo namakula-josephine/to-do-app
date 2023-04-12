@@ -2,7 +2,8 @@ import { Fragment } from "react";
 import "./Welcomepage.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logo_blue from '../../assets/logo_blue.png';
-//import Lock from "@mui/icons-material/Lock";
+
+  //import Lock from "@mui/icons-material/Lock";
 
 
 

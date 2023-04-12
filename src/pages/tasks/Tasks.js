@@ -9,8 +9,8 @@ export default function Tasks() {
     <>
       <Topbar />
       <div className="tasksContainer">
-        <Menubar />
-        <Centerbar />
+         <Menubar /> 
+         <Centerbar /> 
         <Rightbar />
       </div>
     </>
