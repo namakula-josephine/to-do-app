@@ -13,9 +13,9 @@ The app will be developed by 3 Members;
 The Implementation plan of the to do app will consist of:
 
 ### Front-end
-The frontend component will use HTML, CSS and Javascript. It will also use React.js as a framework to create reusable components for rendering different elements of the user interface.
+The frontend component will use HTML, CSS and Javascript as a framework to create reusable components for rendering different elements of the user interface.
 
 ### Back-end
-The Backend system will use Python and Django framework. 
+The Backend system will use Python and Django framework and sql lite for the database. 
 
 
