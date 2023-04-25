@@ -16,6 +16,10 @@ The Implementation plan of the to do app will consist of:
 The frontend component will use HTML, CSS and Javascript as a framework to create reusable components for rendering different elements of the user interface.
 
 ### Back-end
+<<<<<<< HEAD
 The Backend system will use Python and Django framework and sql lite for the database. 
+=======
+The Backend system will use Python and Django framework and sql lite database. 
+>>>>>>> josephine
 
 
