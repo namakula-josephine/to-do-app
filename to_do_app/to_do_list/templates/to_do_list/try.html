@@ -1,0 +1,908 @@
+{% load static%}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TO DO APP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <!--- Our CSS file -->
+ <link rel="stylesheet" href="{% static 'todo/assets/bootstrap/css/bootstrap.min.css' %}">
+ <link rel="stylesheet" href="{% static 'todo/assets/bootstrap/css/bootstrap.min.css' %}">
+ <link rel="stylesheet" href="{% static 'todo/assets/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.min.css" integrity="sha256-/8xGgcV6Mp9fFa2u2lLYOWYNluCdrHEvBfiwhpkD/Js=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/theme.min.css" integrity="sha256-j5WK5GB3+w3i2jRf0bV9dkjJ+mm+TiSEG6WgNiD+gWk=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css" integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dmuy/MDTimePicker.min/dist/mdtimepicker.js/mdtimepicker.css">
+
+      
+        <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <style>
+           
+            body {
+                background-color: #fbfbfb;
+              }
+              @media (min-width: 991.98px) {
+                main {
+                  padding-left: 240px;
+                }
+              }
+              
+              /* Sidebar */
+              .sidebar {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                padding: 58px 0 0; /* Height of navbar */
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+                width: 240px;
+                z-index: 600;
+              }
+              
+              @media (max-width: 991.98px) {
+                .sidebar {
+                  width: 100%;
+                }
+              }
+              .sidebar .active {
+                border-radius: 5px;
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+              }
+              
+              .sidebar-sticky {
+                position: relative;
+                top: 0;
+                height: calc(100vh - 48px);
+                padding-top: 0.5rem;
+                overflow-x: hidden;
+                overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+              }
+
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                background: #EFEFEF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-family: 'Montserrat', sans-serif;
+                height: 100vh;
+                margin: -20px 0 50px;
+            }
+            vh-100{
+
+            }
+            h1 {
+                font-weight: bold;
+                margin: 0;
+                text-align: center;
+            }
+            
+            h2 {
+                text-align: center;
+            }
+            
+            p {
+                font-size: 14px;
+                font-weight: 100;
+                line-height: 20px;
+                letter-spacing: 0.5px;
+                margin: 20px 0 30px;
+            }
+            
+            span {
+                font-size: 12px;
+            }
+            
+            a {
+                color: #333;
+                font-size: 14px;
+                text-decoration: none;
+                margin: 15px 0;
+            }
+            
+            button {
+                border-radius: 20px;
+                border: 1px solid #FF4B2B;
+                background-color: #FF4B2B;
+                color: #FFFFFF;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 12px 45px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+            }
+            
+            button:active {
+                transform: scale(0.95);
+            }
+            
+            button:focus {
+                outline: none;
+            }
+            
+            button.ghost {
+                background-color: transparent;
+                border-color: #FFFFFF;
+            }
+            
+            form {
+                background-color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 50px;
+                height: 100%;
+                text-align: center;
+            }
+            
+            input {
+                background-color: #eee;
+                border: none;
+                padding: 12px 15px;
+                margin: 8px 0;
+                width: 100%;
+            }
+
+            
+            .container {
+                background-color: #fff;
+                border-radius: 10px;
+                  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                        0 10px 10px rgba(0,0,0,0.22);
+                position: relative;
+                overflow: hidden;
+                width: 768px;
+                max-width: 100%;
+                min-height: 480px;
+            }
+            
+            .form-container {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                transition: all 0.6s ease-in-out;
+            }
+            
+            .sign-in-container {
+                left: 0;
+                width: 50%;
+                z-index: 2;
+            }
+            
+            .container.right-panel-active .sign-in-container {
+                transform: translateX(100%);
+            }
+            
+            .sign-up-container {
+                left: 0;
+                width: 50%;
+                opacity: 0;
+                z-index: 1;
+            }
+            #list1 .form-control {
+                border-color: transparent;
+              }
+              #list1 .form-control:focus {
+                border-color: transparent;
+                box-shadow: none;
+              }
+              #list1 .select-input.form-control[readonly]:not([disabled]) {
+                background-color: #fbfbfb;
+              }
+            .container.right-panel-active .sign-up-container {
+                transform: translateX(100%);
+                opacity: 1;
+                z-index: 5;
+                animation: show 0.6s;
+            }
+            
+            @keyframes show {
+                0%, 49.99% {
+                    opacity: 0;
+                    z-index: 1;
+                }
+                
+                50%, 100% {
+                    opacity: 1;
+                    z-index: 5;
+                }
+            }
+            
+            .overlay-container {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                transition: transform 0.6s ease-in-out;
+                z-index: 100;
+            }
+            
+            .container.right-panel-active .overlay-container{
+                transform: translateX(-100%);
+            }
+            
+            .overlay {
+                background: #FF416C;
+                background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+                background: linear-gradient(to right, #FF4B2B, #FF416C);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 0 0;
+                color: #FFFFFF;
+                position: relative;
+                left: -100%;
+                height: 100%;
+                width: 200%;
+                  transform: translateX(0);
+                transition: transform 0.6s ease-in-out;
+            }
+            
+            .container.right-panel-active .overlay {
+                  transform: translateX(50%);
+            }
+            
+            .overlay-panel {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 40px;
+                text-align: center;
+                top: 0;
+                height: 100%;
+                width: 50%;
+                transform: translateX(0);
+                transition: transform 0.6s ease-in-out;
+            }
+            
+            .overlay-left {
+                transform: translateX(-20%);
+            }
+            
+            .container.right-panel-active .overlay-left {
+                transform: translateX(0);
+            }
+            
+            .overlay-right {
+                right: 0;
+                transform: translateX(0);
+            }
+            
+            .container.right-panel-active .overlay-right {
+                transform: translateX(20%);
+            }
+            
+            .social-container {
+                margin: 20px 0;
+            }
+            
+            .social-container a {
+                border: 1px solid #DDDDDD;
+                border-radius: 50%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+                height: 40px;
+                width: 40px;
+            }
+            
+            footer {
+                background-color: #222;
+                color: #fff;
+                font-size: 14px;
+                bottom: 0;
+                position: fixed;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 999;
+            }
+            
+            footer p {
+                margin: 10px 0;
+            }
+            
+            footer i {
+                color: red;
+            }
+            
+            footer a {
+                color: #3c97bf;
+                text-decoration: none;
+            }
+            .task-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              background-color: #fff;
+              border-top: 1px solid #dfe4ea;
+              overflow: hidden;
+          }
+  
+          .task-title {
+              display: flex;
+              padding: 20px;
+          }
+          .task-title {
+            display: flex;
+            padding: 20px;
+        }
+
+        .task-title a {
+            text-decoration: none;
+            color: #4b5156;
+            margin-left: 10px;
+        }
+
+        .task-complete-icon {
+            height: 20px;
+            width: 20px;
+            background-color: #90EE90;
+            border-radius: 50%;
+        }
+
+        .task-incomplete-icon {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218, 218, 218);
+            border-radius: 50%;
+        }
+
+        .delete-link {
+            text-decoration: none;
+            font-weight: 900;
+            color: #cf4949;
+            font-size: 32px;
+            line-height: 0;
+            padding: 20px 0px;
+        } 
+        .dropArea {
+          background-color: #f1f2f6;
+          color: black;
+          border: #ced6e0 1px solid;
+      }
+
+      .selectedTask {
+          opacity: 0.6;
+      }
+
+
+      #add-link {
+          color: #EB796F;
+          text-decoration: none;
+          font-size: 42px;
+          text-shadow: 1px 1px #81413b;
+      }
+
+      #search-add-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+      }
+
+      @media screen and (max-width:320px) {
+          #search-add-wrapper {
+              padding: 10px;
+          }
+      }
+
+      input[type=text],
+      input[type=password],
+      textarea {
+          border: 1px solid #757575;
+          border-radius: 5px;
+          padding: 10px;
+          width: 90%;
+      }
+
+      label {
+          padding-top: 10px !important;
+          display: block;
+      }
+
+      ::placeholder {
+          font-weight: 300;
+          opacity: 0.5;
+      }
+
+      .button {
+          border: 1px solid #757575;
+          background-color: #FFF;
+          color: #EB796F;
+          padding: 10px;
+          font-size: 14px;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+      }
+
+      .card-body {
+          padding: 20px;
+          height:70%
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrapper {
+        display: block;
+    }
+    #body-row {
+        margin-left:0;
+        margin-right:0;
+    }
+    #sidebar-container {
+        min-height: 100vh;   
+        background-color: #333;
+        padding: 0;
+    }
+    .row{
+        margin-top:56px;
+    }
+    /* Sidebar sizes when expanded and expanded */
+    .sidebar-expanded {
+        width: 230px;
+    }
+    .sidebar-collapsed {
+        width: 60px;
+    }
+    
+    /* Menu item*/
+    #sidebar-container .list-group a {
+        height: 50px;
+        color: white;
+        background-color: #292b2c;
+    }
+    
+    /* Submenu item*/
+    #sidebar-container .list-group .sidebar-submenu a {
+        height: 45px;
+        padding-left: 30px;
+    }
+    .sidebar-submenu {
+        font-size: 0.9rem;
+    }
+    
+    /* Separators */
+    .sidebar-separator-title {
+        background-color: #333;
+        height: 35px;
+    }
+    .sidebar-separator {
+        background-color: #333;
+        height: 25px;
+    }
+    .logo-separator {
+        background-color: #333;    
+        height: 60px;
+    }
+    
+    /* Closed submenu icon */
+    #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+      content: " \f0d7";
+      font-family: FontAwesome;
+      display: inline;
+      text-align: right;
+      padding-left: 10px;
+    }
+    /* Opened submenu icon */
+    #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+      content: " \f0da";
+      font-family: FontAwesome;
+      display: inline;
+      text-align: right;
+      padding-left: 10px;
+    }
+    
+  
+        </style>
+    </head>
+       <body>
+        <!-- Bootstrap NavBar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+    <a class="navbar-brand" href="#">
+      <!--<img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+      <span class="menu-collapsed">ChurchMgt</span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Support</a>
+        </li>
+          <!-- notification -->
+          <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+            <ul aria-labelledby="notifications" class="dropdown-menu">
+              <li><a rel="nofollow" href="#" class="dropdown-item">
+                  <div class="notification">
+                    <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+                    <div class="notification-time"><small>4 minutes ago</small></div>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item">
+                  <div class="notification">
+                    <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                    <div class="notification-time"><small>4 minutes ago</small></div>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item">
+                  <div class="notification">
+                    <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+                    <div class="notification-time"><small>4 minutes ago</small></div>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item">
+                  <div class="notification">
+                    <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                    <div class="notification-time"><small>10 minutes ago</small></div>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications</strong></a></li>
+            </ul>
+          </li>
+          <!-- Messages -->
+          <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
+            <ul aria-labelledby="notifications" class="dropdown-menu">
+              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                  <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                  <div class="msg-body">
+                    <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                  <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                  <div class="msg-body">
+                    <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                  <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                  <div class="msg-body">
+                    <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
+                  </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
+            </ul>
+          </li>
+          <!-- profile -->
+          <li class="dropdown">
+            <a id="profile" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fa fa-user-circle-o"></i></a>
+            <ul aria-labelledby="notifications" class="dropdown-menu dropdown-profile" id="userprof">
+              <li><a href="#"><i class="fa fa-user p-1 pb-2"></i> User Profile</a>
+              </li>
+              <li><a href="#"><i class="fa fa-cog p-1"></i> Settings</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="login.html"><i class="fa fa-sign-out p-1 "></i> Logout</a>
+              </li>
+               
+        </ul>
+  
+        <!-- This menu is hidden in bigger devices with d-sm-none. 
+             The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+        </li><li class="nav-item dropdown d-sm-block d-md-none">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Tasks</a>
+              <a class="dropdown-item" href="#">Etc ...</a>
+          </div>
+        </li><!-- Smaller devices menu END -->
+        <li class="nav-item"><a href="#loginpage" class="nav-link"><span class="fa fa-sign-out" aria-hidden="true"></span>Logout</a></li>
+      
+    </ul></div>
+    </div>
+  </nav><!-- NavBar END -->
+  
+  
+  <!-- Bootstrap row -->
+  <div class="row" id="body-row">
+      <!-- Sidebar -->
+      <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+          <!-- Bootstrap List Group -->
+          <ul class="list-group">
+              <!-- Separator with title -->
+              <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                  <small>MAIN MENU</small>
+              </li>
+              <!-- /END Separator -->
+              <!-- Menu with submenu -->
+              <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="fa fa-dashboard fa-fw mr-3"></span> 
+                      <span class="menu-collapsed">Dashboard</span>
+                      <span class="submenu-icon ml-auto"></span>
+                  </div>
+              </a>
+              <!-- Submenu content -->
+              <div id="submenu1" class="collapse sidebar-submenu">
+                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                      <span class="menu-collapsed">Charts</span>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                      <span class="menu-collapsed">Reports</span>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                      <span class="menu-collapsed">Tables</span>
+                  </a>
+              </div>
+              <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="fa fa-user fa-fw mr-3"></span>
+                      <span class="menu-collapsed">Profile</span>
+                      <span class="submenu-icon ml-auto"></span>
+                  </div>
+              </a>
+              <!-- Submenu content -->
+              <div id="submenu2" class="collapse sidebar-submenu">
+                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                      <span class="menu-collapsed">Settings</span>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                      <span class="menu-collapsed">Password</span>
+                  </a>
+              </div>            
+              <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="fa fa-tasks fa-fw mr-3"></span>
+                      <span class="menu-collapsed">Tasks</span>    
+                  </div>
+              </a>
+              <!-- Separator with title -->
+              <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                  <small>OPTIONS</small>
+              </li>
+              <!-- /END Separator -->
+              <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="fa fa-calendar fa-fw mr-3"></span>
+                      <span class="menu-collapsed">Calendar</span>
+                  </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="fa fa-envelope-o fa-fw mr-3"></span>
+                      <span class="menu-collapsed">Messages <span class="badge badge-pill badge-primary ml-2">5</span></span>
+                  </div>
+              </a>
+              <!-- Separator without title -->
+              <li class="list-group-item sidebar-separator menu-collapsed"></li>            
+              <!-- /END Separator -->
+              <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="fa fa-question fa-fw mr-3"></span>
+                      <span class="menu-collapsed">Help</span>
+                  </div>
+              </a>
+              <a href="#" data-toggle="sidebar-colapse" class="list-group-item list-group-item-action d-flex align-items-center">
+                  <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                      <span id="collapse-text" class="menu-collapsed">Collapse</span>
+                  </div>
+              </a>
+              <!-- Logo -->
+              <li class="list-group-item logo-separator d-flex justify-content-center">
+                  <img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30">    
+              </li>   
+          </ul><!-- List Group END-->
+      </div><!-- sidebar-container END -->
+  
+      <!-- MAIN -->
+      <div class="col">
+          
+          <h1>
+              Main content
+              <small class="text-muted">Bootstrap v4-beta</small>
+          </h1>
+          
+          
+          <div class="alert alert-success" role="alert">
+              <strong>Well done!</strong> You successfully read this important alert message.
+          </div>
+          
+  
+          <div class="card">
+            <h4 class="card-header">Featured</h4>
+            <div class="card-body">
+              <h4 class="card-title">Special title treatment</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+         
+  
+  
+      </div><!-- Main Col END -->
+      
+  </div><!-- body-row END -->
+  <script>
+
+    $('#body-row .collapse').collapse('hide'); 
+
+// Collapse/Expand icon
+$('#collapse-icon').addClass('fa-angle-double-left'); 
+
+// Collapse click
+$('[data-toggle=sidebar-colapse]').click(function() {
+    SidebarCollapse();
+});
+
+function SidebarCollapse () {
+    $('.menu-collapsed').toggleClass('d-none');
+    $('.sidebar-submenu').toggleClass('d-none');
+    $('.submenu-icon').toggleClass('d-none');
+    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+    
+    // Treating d-flex/d-none on separators with title
+    var SeparatorTitle = $('.sidebar-separator-title');
+    if ( SeparatorTitle.hasClass('d-flex') ) {
+        SeparatorTitle.removeClass('d-flex');
+    } else {
+        SeparatorTitle.addClass('d-flex');
+    }
+    
+    // Collapse/Expand icon
+    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+}
+  </script>
+</body>
+        <!--Main Navigation-->
+
+        {% comment %} <header> {% endcomment %}
+    {% comment %} <!-- Sidebar -->
+    <nav
+         id="sidebarMenu"
+         class="collapse d-lg-block sidebar collapse "
+         >
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a
+             href="#"
+             class="list-group-item list-group-item-action py-2 ripple"
+             aria-current="true"
+             >
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i
+              ><span>Main dashboard</span>
+          </a>
+          
+          <a
+             href="#"
+             class="list-group-item list-group-item-action py-2 ripple active"
+             >
+            <i class="fas fa-chart-area fa-fw me-3"></i
+              ><span>Create Task</span>
+          </a>
+       
+          <a
+          href="#"
+          class="list-group-item list-group-item-action py-2 ripple active"
+          >
+         <i class="fas fa-chart-area fa-fw me-3"></i
+           ><span>Completed</span>
+       </a>
+       <a
+       href="#"
+       class="list-group-item list-group-item-action py-2 ripple active"
+       >
+      <i class="fas fa-chart-area fa-fw me-3"></i
+        ><span>Finished</span>
+
+    </a>
+    <a
+    href="#"
+    class="list-group-item list-group-item-action py-2 ripple active"
+    >
+   <i class="fas fa-chart-area fa-fw me-3"></i
+     ><span>Statistics</span>
+ </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+  
+    <!-- Navbar -->
+    <nav
+         id="main-navbar"
+         class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+         >
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <a href="" class="nav_logo"> 
+
+  
+        <!-- Brand -->
+        <a class="navbar-brand" href="{% static 'YOURTODO.JPG' %}" >
+           
+
+        </a>
+        <!-- Search form -->
+        
+        <form method="GET" class="navbar-nav ms-auto d-flex flex-row">
+            <input type='text' name='search-area' placeholder="Search your task" value="{{search_input}}">
+            <input class="button" type="submit" value='Search'>
+            
+        </form>
+
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+        <hl > Hello {{request.user|title}}</h1></ul>
+            <u1><div>
+   
+           
+          </div></ul>
+      </div>
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+          <!-- Notification dropdown -->
+          <li class="nav-item dropdown">
+            {% if request.user.is_authenticated %}
+  
+       <a href={% url 'logout' %}><button type="button" class="btn btn-outline-primary">LOGOUT</button> </a>
+    {% else %}
+      <a  href={% url 'login' %}>Login</a>
+  
+      {% endif %}
+        </ul>
+        
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+  
+  <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container pt-4">
+       
+            {% block content %}
+            
+       
+            {% endblock content %}
+           
+        
+             </div>
+               
+    
+  </main>
+
+      
+        
+    </body>
+   
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> <script src="https://kit.fontawesome.com/15974f9624.js" crossorigin="anonymous"></script> {% endcomment %}
+</html>
