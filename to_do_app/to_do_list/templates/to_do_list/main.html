@@ -1,5 +1,4 @@
 {% load static%}
-<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -165,6 +164,22 @@
                 margin: 8px 0;
                 width: 100%;
             }
+
+            /* Target the input element inside the #task div */
+#task input {
+  /* Apply some basic styling */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Target the input element inside the #task div when it's in focus (i.e. clicked) */
+#task input :focus {
+  /* Apply additional styling when in focus */
+  border-color: blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+}
+
 
             
             .container {
@@ -462,105 +477,14 @@
     </head>
        {% comment %} <body>
         <!-- Bootstrap NavBar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="container">
-    <a class="navbar-brand" href="#">
-      <!--<img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-      <span class="menu-collapsed">ChurchMgt</span>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Help</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Support</a>
-        </li>
-          <!-- notification -->
-          <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
-            <ul aria-labelledby="notifications" class="dropdown-menu">
-              <li><a rel="nofollow" href="#" class="dropdown-item">
-                  <div class="notification">
-                    <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
-                    <div class="notification-time"><small>4 minutes ago</small></div>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item">
-                  <div class="notification">
-                    <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                    <div class="notification-time"><small>4 minutes ago</small></div>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item">
-                  <div class="notification">
-                    <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
-                    <div class="notification-time"><small>4 minutes ago</small></div>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item">
-                  <div class="notification">
-                    <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-                    <div class="notification-time"><small>10 minutes ago</small></div>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications</strong></a></li>
-            </ul>
-          </li>
-          <!-- Messages -->
-          <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
-            <ul aria-labelledby="notifications" class="dropdown-menu">
-              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                  <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                  <div class="msg-body">
-                    <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                  <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                  <div class="msg-body">
-                    <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                  <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                  <div class="msg-body">
-                    <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
-                  </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
-            </ul>
-          </li>
-          <!-- profile -->
-          <li class="dropdown">
-            <a id="profile" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link">
-              <i class="fa fa-user-circle-o"></i></a>
-            <ul aria-labelledby="notifications" class="dropdown-menu dropdown-profile" id="userprof">
-              <li><a href="#"><i class="fa fa-user p-1 pb-2"></i> User Profile</a>
-              </li>
-              <li><a href="#"><i class="fa fa-cog p-1"></i> Settings</a></li>
-              <li class="dropdown-divider"></li>
-              <li><a href="login.html"><i class="fa fa-sign-out p-1 "></i> Logout</a>
-              </li>
-               
-        </ul>
-  
-        <!-- This menu is hidden in bigger devices with d-sm-none. 
-             The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
-        </li><li class="nav-item dropdown d-sm-block d-md-none">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Menu
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Dashboard</a>
-              <a class="dropdown-item" href="#">Profile</a>
-              <a class="dropdown-item" href="#">Tasks</a>
-              <a class="dropdown-item" href="#">Etc ...</a>
-          </div>
-        </li><!-- Smaller devices menu END -->
-        <li class="nav-item"><a href="#loginpage" class="nav-link"><span class="fa fa-sign-out" aria-hidden="true"></span>Logout</a></li>
-      
-    </ul></div>
-    </div>
-  </nav><!-- NavBar END -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
   
   
   <!-- Bootstrap row -->
@@ -583,24 +507,6 @@
                   </div>
               </a>
               <!-- Submenu content -->
-              <div id="submenu1" class="collapse sidebar-submenu">
-                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                      <span class="menu-collapsed">Charts</span>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                      <span class="menu-collapsed">Reports</span>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                      <span class="menu-collapsed">Tables</span>
-                  </a>
-              </div>
-              <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span class="fa fa-user fa-fw mr-3"></span>
-                      <span class="menu-collapsed">Profile</span>
-                      <span class="submenu-icon ml-auto"></span>
-                  </div>
-              </a>
               <!-- Submenu content -->
               <div id="submenu2" class="collapse sidebar-submenu">
                   <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
@@ -683,8 +589,6 @@
       </div><!-- Main Col END -->
       
   </div><!-- body-row END -->
-  <script></script
-</body>
         <!--Main Navigation--> {% endcomment %}
 
         {% comment %} <header> {% endcomment %}
@@ -705,7 +609,7 @@
           </a>
           
           <a
-             href="#"
+             href="{% url 'task-create' %}"
              class="list-group-item list-group-item-action py-2 ripple active"
              >
             <i class="fas fa-chart-area fa-fw me-3"></i
@@ -811,3 +715,5 @@
   
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> <script src="https://kit.fontawesome.com/15974f9624.js" crossorigin="anonymous"></script> 
 </html>
+
+
