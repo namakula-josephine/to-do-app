@@ -28,14 +28,24 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css" integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dmuy/MDTimePicker.min/dist/mdtimepicker.js/mdtimepicker.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       
         <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <style>
+            
            
             body {
                 background-color: #fbfbfb;
+                font-family: 'Montserrat', sans-serif;
+                
+              }
+              p{
+                font-weight:normal;
               }
               @media (min-width: 991.98px) {
                 main {
@@ -86,11 +96,9 @@
                 flex-direction: column;
                 font-family: 'Montserrat', sans-serif;
                 height: 100vh;
-                margin: -20px 0 50px;
+                margin: 20px, 50px;
             }
-            vh-100{
 
-            }
             h1 {
                 font-weight: bold;
                 margin: 0;
@@ -155,6 +163,7 @@
                 padding: 0 50px;
                 height: 100%;
                 text-align: center;
+                font-weight: 600;
             }
             
             input {
@@ -165,21 +174,6 @@
                 width: 100%;
             }
 
-            /* Target the input element inside the #task div */
-#task input {
-  /* Apply some basic styling */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Target the input element inside the #task div when it's in focus (i.e. clicked) */
-#task input :focus {
-  /* Apply additional styling when in focus */
-  border-color: blue;
-  box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
-}
-
 
             
             .container {
@@ -188,10 +182,12 @@
                   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
                         0 10px 10px rgba(0,0,0,0.22);
                 position: relative;
-                overflow: hidden;
+                overflow:hidden;
                 width: 768px;
                 max-width: 100%;
                 min-height: 480px;
+                padding: 20px;
+                margin-top: 700px;
             }
             
             .form-container {
@@ -199,6 +195,7 @@
                 top: 0;
                 height: 100%;
                 transition: all 0.6s ease-in-out;
+                padding: 20px;
             }
             
             .sign-in-container {
@@ -252,7 +249,7 @@
                 left: 50%;
                 width: 50%;
                 height: 100%;
-                overflow: hidden;
+                overflow: scroll;
                 transition: transform 0.6s ease-in-out;
                 z-index: 100;
             }
@@ -358,7 +355,7 @@
               justify-content: space-between;
               background-color: #fff;
               border-top: 1px solid #dfe4ea;
-              overflow: hidden;
+              overflow: scroll;
           }
   
           .task-title {
@@ -417,7 +414,7 @@
       }
 
       #search-add-wrapper {
-          display: flex;
+          display: inline;
           justify-content: space-between;
           align-items: center;
           padding: 20px;
@@ -485,110 +482,8 @@
               </form>
             </div>
           </nav>
-  
-  
-  <!-- Bootstrap row -->
-  <div class="row" id="body-row">
-      <!-- Sidebar -->
-      <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
-          <!-- Bootstrap List Group -->
-          <ul class="list-group">
-              <!-- Separator with title -->
-              <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-                  <small>MAIN MENU</small>
-              </li>
-              <!-- /END Separator -->
-              <!-- Menu with submenu -->
-              <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span class="fa fa-dashboard fa-fw mr-3"></span> 
-                      <span class="menu-collapsed">Dashboard</span>
-                      <span class="submenu-icon ml-auto"></span>
-                  </div>
-              </a>
-              <!-- Submenu content -->
-              <!-- Submenu content -->
-              <div id="submenu2" class="collapse sidebar-submenu">
-                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                      <span class="menu-collapsed">Settings</span>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                      <span class="menu-collapsed">Password</span>
-                  </a>
-              </div>            
-              <a href="#" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span class="fa fa-tasks fa-fw mr-3"></span>
-                      <span class="menu-collapsed">Tasks</span>    
-                  </div>
-              </a>
-              <!-- Separator with title -->
-              <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-                  <small>OPTIONS</small>
-              </li>
-              <!-- /END Separator -->
-              <a href="#" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span class="fa fa-calendar fa-fw mr-3"></span>
-                      <span class="menu-collapsed">Calendar</span>
-                  </div>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                      <span class="menu-collapsed">Messages <span class="badge badge-pill badge-primary ml-2">5</span></span>
-                  </div>
-              </a>
-              <!-- Separator without title -->
-              <li class="list-group-item sidebar-separator menu-collapsed"></li>            
-              <!-- /END Separator -->
-              <a href="#" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span class="fa fa-question fa-fw mr-3"></span>
-                      <span class="menu-collapsed">Help</span>
-                  </div>
-              </a>
-              <a href="#" data-toggle="sidebar-colapse" class="list-group-item list-group-item-action d-flex align-items-center">
-                  <div class="d-flex w-100 justify-content-start align-items-center">
-                      <span id="collapse-icon" class="fa fa-2x mr-3"></span>
-                      <span id="collapse-text" class="menu-collapsed">Collapse</span>
-                  </div>
-              </a>
-              <!-- Logo -->
-              <li class="list-group-item logo-separator d-flex justify-content-center">
-                  <img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30">    
-              </li>   
-          </ul><!-- List Group END-->
-      </div><!-- sidebar-container END -->
-  
-      <!-- MAIN -->
-      <div class="col">
-          
-          <h1>
-              Main content
-              <small class="text-muted">Bootstrap v4-beta</small>
-          </h1>
-          
-          
-          <div class="alert alert-success" role="alert">
-              <strong>Well done!</strong> You successfully read this important alert message.
-          </div>
-          
-  
-          <div class="card">
-            <h4 class="card-header">Featured</h4>
-            <div class="card-body">
-              <h4 class="card-title">Special title treatment</h4>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-         
-  
-  
-      </div><!-- Main Col END -->
       
-  </div><!-- body-row END -->
+
         <!--Main Navigation--> {% endcomment %}
 
         {% comment %} <header> {% endcomment %}
@@ -621,7 +516,7 @@
           class="list-group-item list-group-item-action py-2 ripple active"
           >
          <i class="fas fa-chart-area fa-fw me-3"></i
-           ><span>Completed</span>
+           ><span>Pending</span>
        </a>
        <a
        href="#"
@@ -636,7 +531,7 @@
     class="list-group-item list-group-item-action py-2 ripple active"
     >
    <i class="fas fa-chart-area fa-fw me-3"></i
-     ><span>Statistics</span>
+     ><span>Skipped</span>
  </a>
         </div>
       </div>
@@ -648,22 +543,17 @@
          id="main-navbar"
          class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
          >
+
+      
       <!-- Container wrapper -->
       <div class="container-fluid">
-        <!-- Toggle button -->
-        <a href="" class="nav_logo"> 
-
-  
-        <!-- Brand -->
-        <a class="navbar-brand" href="{% static 'YOURTODO.JPG' %}" >
-           
-
-        </a>
+        
         <!-- Search form -->
         
         <form method="GET" class="navbar-nav ms-auto d-flex flex-row">
-            <input type='text' name='search-area' placeholder="Search your task" value="{{search_input}}">
-            <input class="button" type="submit" value='Search'>
+            <marquee>Great Day! </marquee>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="{{search_input}}">
+            <Button class="btn btn-dark" type="submit">search</Button>
             
         </form>
 
@@ -680,9 +570,9 @@
           <li class="nav-item dropdown">
             {% if request.user.is_authenticated %}
   
-       <a href={% url 'logout' %}><button type="button" class="btn btn-outline-primary">LOGOUT</button> </a>
+       <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-primary">LOGOUT</button> </a>
     {% else %}
-      <a  href={% url 'login' %}>Login</a>
+      <a  href="{% url 'login' %}">Login</a>
   
       {% endif %}
         </ul>
@@ -694,8 +584,8 @@
   <!--Main Navigation-->
   
   <!--Main layout-->
-  <main style="margin-top: 58px">
-    <div class="container pt-4">
+  <div>
+    <div class="container">
        
             {% block content %}
             
@@ -706,7 +596,7 @@
              </div>
                
     
-  </main>
+            </div>
 
       
         
