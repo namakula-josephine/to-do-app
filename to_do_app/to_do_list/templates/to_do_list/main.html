@@ -512,14 +512,14 @@
           </a>
        
           <a
-          href="#"
+          href="{% url 'pending_tasks' %}"
           class="list-group-item list-group-item-action py-2 ripple active"
           >
          <i class="fas fa-chart-area fa-fw me-3"></i
            ><span>Pending</span>
        </a>
        <a
-       href="#"
+       href="{% url 'finished_tasks' %}"
        class="list-group-item list-group-item-action py-2 ripple active"
        >
       <i class="fas fa-chart-area fa-fw me-3"></i
@@ -527,7 +527,7 @@
 
     </a>
     <a
-    href="#"
+    href="{% url 'skipped_tasks' %}"
     class="list-group-item list-group-item-action py-2 ripple active"
     >
    <i class="fas fa-chart-area fa-fw me-3"></i

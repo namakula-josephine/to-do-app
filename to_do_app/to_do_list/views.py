@@ -1,7 +1,7 @@
-from django.shortcuts import render,redirect
+from django.utils import timezone
+from django.shortcuts import redirect
 from . models import Task
 from django.views.generic.list import ListView
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView,FormView
@@ -10,6 +10,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import NewUserForm
 # Create your views here.
+
 class CustomLoginView(LoginView):
      template_name='to_do_list/login.html'
      fields='__all__'
@@ -21,6 +22,7 @@ class TaskList(LoginRequiredMixin,ListView):
     models =Task
     queryset = models.objects.all()
     context_object_name='tasks'
+    
 
     def get_context_data(self,**kwargs):
         context =super().get_context_data(**kwargs)
@@ -32,6 +34,7 @@ class TaskList(LoginRequiredMixin,ListView):
         
         context['search_input']=search_input  
         return context 
+
 
 class TaskDetail(LoginRequiredMixin,DetailView):
     model=Task
@@ -45,6 +48,38 @@ class TaskCreate(LoginRequiredMixin,CreateView):
       def form_valid(self,form):
           form.instance.user =self.request.user
           return super(TaskCreate,self).form_valid(form)
+
+
+class PendingTaskList(LoginRequiredMixin, ListView):
+    model = Task
+    context_object_name = 'tasks'
+    template_name = 'pending.html'
+
+    def get_queryset(self):
+        user = self.request.user
+        return Task.objects.filter(user=user, complete=False)
+    
+class FinishedTaskList(LoginRequiredMixin, ListView):
+    model = Task
+    context_object_name = 'tasks'
+    template_name = 'finished.html'
+
+    def get_queryset(self):
+        user = self.request.user
+        return Task.objects.filter(user=user, complete=True)
+    
+class SkippedTaskList(LoginRequiredMixin, ListView):
+    model = Task
+    context_object_name = 'tasks'
+    template_name = 'skipped.html'
+
+    def get_queryset(self):
+    # Retrieve skipped tasks
+        user = self.request.user
+        return Task.objects.filter(user=user, complete=False, due__lt=timezone.now())
+
+
+    
 class TaskUpdate(LoginRequiredMixin,UpdateView):
      model= Task
      fields =['title','description','complete','due','time']
@@ -70,7 +105,7 @@ class RegisterPage(FormView):
             return redirect('tasks')
         return super(RegisterPage,self).get(*args,**kwargs)
     
-        
 
+        
 
 
