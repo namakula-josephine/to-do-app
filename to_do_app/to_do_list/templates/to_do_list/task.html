@@ -2,4 +2,45 @@
 {% block content %}
 
 <h1>Task: {{task}}
+    {% extends 'to_do_list/base.html' %}
+
+{% block content %}
+  <h1>Tasks</h1>
+  
+  <!-- Display the calendar -->
+  <div id="calendar">
+    {{ calendar }}
+  </div>
+
+  <!-- Display the upcoming tasks -->
+  <h2>Upcoming Tasks</h2>
+  <ul>
+    {% for task in tasks %}
+      <li>{{ task.title }} - Remaining: {{ task.remaining_days }} days</li>
+    {% empty %}
+      <li>No upcoming tasks.</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Display the finished tasks -->
+  <h2>Finished Tasks</h2>
+  <ul>
+    {% for task in finished_tasks %}
+      <li>{{ task.title }} - Finished: {{ task.finished_time|timesince }} ago</li>
+    {% empty %}
+      <li>No finished tasks.</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Display the skipped tasks -->
+  <h2>Skipped Tasks</h2>
+  <ul>
+    {% for task in skipped_tasks %}
+      <li>{{ task.title }} - Skipped: {{ task.skipped_time|timeuntil }} ago</li>
+    {% empty %}
+      <li>No skipped tasks.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
  {% endblock content %}

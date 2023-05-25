@@ -11,6 +11,9 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import NewUserForm
 from django.views.generic import TemplateView
+from django.utils.safestring import mark_safe
+import calendar
+from datetime import datetime, timedelta
 
 # Create your views here.
 
@@ -39,7 +42,23 @@ class TaskList(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['count'] = context['tasks'].filter(complete=False).count()
         context['search_input'] = self.request.GET.get('search-area', '')
+        
+        # Generate the calendar HTML
+        context['calendar'] = self.get_calendar_html()
+
         return context
+
+    def get_calendar_html(self):
+        # Generate the calendar HTML using the current year and month
+        year = datetime.now().year
+        month = datetime.now().month
+        calendar_html = self.generate_calendar(year, month)
+        return mark_safe(calendar_html)
+
+    def generate_calendar(self, year, month):
+        # Generate the calendar HTML using the calendar library
+        cal = calendar.HTMLCalendar().formatmonth(year, month)
+        return cal
 
 
 class TaskDetail(LoginRequiredMixin, DetailView):

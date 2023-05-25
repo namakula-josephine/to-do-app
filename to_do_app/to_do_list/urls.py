@@ -18,4 +18,6 @@ urlpatterns = [
       path('skipped/', SkippedTaskList.as_view(), name='skipped_tasks'),
      path('task-delete/<int:pk>/',DeleteView.as_view(),name='task-delete'),
      path('calendar/', views.CalendarView.as_view(), name='calendar'),
+
+
 ]
