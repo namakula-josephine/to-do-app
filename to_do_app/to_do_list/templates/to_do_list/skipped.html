@@ -13,7 +13,7 @@
     <div id="tasklist" class="card-body">
         {% for task in tasks %}
             <div class="task-wrapper" data-position="{{ task.pk }}">
-                <div class="task-title">
+                <div class="task-title {% if task.complete %}completed-task{% endif %}">
                     {% if not task.complete %}
                         <div class="task-complete-icon"></div>
                         <i><s><a href="{% url 'task-update' task.id %}">{{ task }}</a></s></i>
