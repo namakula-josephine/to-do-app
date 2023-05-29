@@ -13,7 +13,10 @@ from .forms import NewUserForm
 from django.views.generic import TemplateView
 from django.utils.safestring import mark_safe
 import calendar
-from datetime import datetime, timedelta
+from datetime import datetime
+from django.core.mail import send_mail
+from django.conf import settings
+
 
 # Create your views here.
 
@@ -21,9 +24,16 @@ class CustomLoginView(LoginView):
     template_name = 'to_do_list/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
+    
 
     def get_success_url(self):
+        subject = 'Todo App: Yours due minutes'
+        message = 'Dear\n\nThis is a reminder time'
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = ['jnamakula324@gmail.com']
+        send_mail(subject, message, from_email, recipient_list)
         return reverse_lazy('tasks')
+    
 
 
 class TaskList(LoginRequiredMixin, ListView):
@@ -80,7 +90,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
 class PendingTaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
-    template_name = 'pending.html'
+    template_name = 'to_do_list/pending.html'
 
     def get_queryset(self):
         user = self.request.user
@@ -90,7 +100,7 @@ class PendingTaskList(LoginRequiredMixin, ListView):
 class FinishedTaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
-    template_name = 'finished.html'
+    template_name = 'to_do_list/finished.html'
 
     def get_queryset(self):
         user = self.request.user
@@ -100,7 +110,7 @@ class FinishedTaskList(LoginRequiredMixin, ListView):
 class SkippedTaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
-    template_name = 'skipped.html'
+    template_name = 'to_do_list/skipped.html'
 
     def get_queryset(self):
         user = self.request.user
@@ -138,3 +148,4 @@ class RegisterPage(FormView):
     
 class CalendarView(TemplateView):
     template_name = 'to_do_list/calendar.html'    
+

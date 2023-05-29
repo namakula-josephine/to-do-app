@@ -2,6 +2,16 @@
  {% extends 'to_do_list/main.html ' %}
  {% block content %}
  {% load static %}
+ <head>
+ <style>
+  #tasklist {
+    max-height: 500px; /* Set the maximum height for the table */
+    overflow-y: auto; /* Enable vertical scroll when the table exceeds the maximum height */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 20;
+  }
+  </style>
+  </head>
   {% if tasks|length > 0 %}
   <a class="navbar-brand" href="{% static 'YOURTODO.JPG' %}">
     <img src="{% static 'YOURTODO.JPG' %}" alt="Logo" style="width: 200px; height: 100px;">
@@ -12,7 +22,7 @@
     Add
   </button></a>
   {% endif %}
-  <h3v6 style="margin:0">You have <i>{{ count }}</i> incomplete task{{ count|pluralize:"s" }} </h3v6>
+  <h3 style="margin:0">You have <i>{{ count }}</i> incomplete task{{ count|pluralize:"s" }} </h3>
 
 
     <div id="tasklist" class="card-body">
@@ -48,14 +58,7 @@
       {% endfor %}
   </class=>
    </div>
-   <style>
-   #tasklist {
-     max-height: 500px; /* Set the maximum height for the table */
-     overflow-y: auto; /* Enable vertical scroll when the table exceeds the maximum height */
-     margin-top: 0; /* Remove top margin */
-     margin-bottom: 20;
-   }
-   </style>
+  
 
 
 {% endblock content %}
