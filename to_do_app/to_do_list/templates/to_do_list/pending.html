@@ -3,7 +3,7 @@
   {% load static %}
   {% if tasks|length > 0 %}
     <a class="navbar-brand" href="{% static 'YOURTODO.JPG' %}">
-      <img src="{% static 'YOURTODO.JPG' %}" alt="Logo" style="width: 150px; height: 150px;">
+      <img src="{% static 'YOURTODO.JPG' %}" alt="Logo" style="width: 200px; height: 100px;">
     </a>
 
     <a id="add-link" href="{% url 'task-create' %}">
@@ -12,18 +12,21 @@
       </button>
     </a>
   {% endif %}
-  <h3 style="margin: 0">You have <i>{{ count }}</i> pending task{{ count|pluralize:"s" }}</h3>
+
+  <div>
+    <h3>Total Pending Tasks: {{ tasks|length }}</h3>
+  </div>
 
   <div id="tasklist" class="card-body">
     {% for task in tasks %}
       <div class="task-wrapper" data-position="{{ task.pk }}">
         <div class="task-title">
           {% if not task.complete %}
-            <div class="task-complete-icon"></div>
-            <i><s><a href="{% url 'task-update' task.id %}">{{ task }}</a></s></i>
-          {% else %}
             <div class="task-incomplete-icon"></div>
             <a href="{% url 'task-update' task.id %}">{{ task }}</a>
+          {% else %}
+            <div class="task-complete-icon"></div>
+            <i><s><a href="{% url 'task-update' task.id %}">{{ task }}</a></s></i>
           {% endif %}
         </div>
         <div>
@@ -36,7 +39,7 @@
       </div>
     {% empty %}
       <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
-        <h3>No new tasks are created.</h3>
+        <h3>No pending tasks.</h3>
         <h3>Create a <a style="text-decoration: none; color: #e53935;" href="{% url 'task-create' %}">New task</a> ! </h3>
       </div>
     {% endfor %}

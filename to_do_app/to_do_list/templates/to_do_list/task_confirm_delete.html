@@ -1,7 +1,6 @@
 {% extends 'to_do_list/main.html ' %}
 {% block content %}
 
-
 <a href="{% url 'tasks' %}">Go back</a>
 <form method="POST">
      {% csrf_token %} 
