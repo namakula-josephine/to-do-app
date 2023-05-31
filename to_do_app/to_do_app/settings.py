@@ -28,13 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # We shall change the *console with smtp when we begin hosting  
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jnamakula324@gmail.com'
-EMAIL_HOST_PASSWORD = 'jznjooofnpbvrzfr'
-EMAIL_USE_TLS = True
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',

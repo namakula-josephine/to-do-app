@@ -15,7 +15,7 @@ class Task(models.Model):
     complete = models.BooleanField(default=False)
     due  = models.DateTimeField(auto_now_add=False,auto_now=False,blank=True,null=True)
     time=models.TimeField( auto_now_add=False,auto_now=False,blank=True,null=True)
-    created_at = models.DateTimeField(auto_now_add=True, null=True)  # delete tasks after seven days
+    
     
     
     def __str__(self):

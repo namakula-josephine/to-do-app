@@ -14,8 +14,7 @@ from django.views.generic import TemplateView
 from django.utils.safestring import mark_safe
 import calendar
 from datetime import datetime
-from django.core.mail import send_mail
-from django.conf import settings
+
 
 
 # Create your views here.
@@ -24,16 +23,10 @@ class CustomLoginView(LoginView):
     template_name = 'to_do_list/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
-    
 
     def get_success_url(self):
-        subject = 'Todo App: Yours due minutes'
-        message = 'Dear\n\nThis is a reminder time'
-        from_email = settings.EMAIL_HOST_USER
-        recipient_list = ['jnamakula324@gmail.com']
-        send_mail(subject, message, from_email, recipient_list)
-        return reverse_lazy('tasks')
-    
+       return reverse_lazy ('tasks')
+
 
 
 class TaskList(LoginRequiredMixin, ListView):
