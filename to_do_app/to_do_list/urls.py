@@ -14,10 +14,10 @@ urlpatterns = [
     path('task-update/<int:pk>/',TaskUpdate.as_view(),name='task-update'),
     path('task-delete/<int:pk>/',DeleteView.as_view(),name='task-delete'),
     path('pending/', PendingTaskList.as_view(), name='pending_tasks'),
-     path('finished/', FinishedTaskList.as_view(), name='finished_tasks'),
-      path('skipped/', SkippedTaskList.as_view(), name='skipped_tasks'),
-     path('task-delete/<int:pk>/',DeleteView.as_view(),name='task-delete'),
-     path('calendar/', views.CalendarView.as_view(), name='calendar'),
+    path('finished/', FinishedTaskList.as_view(), name='finished_tasks'),
+    path('skipped/', SkippedTaskList.as_view(), name='skipped_tasks'),
+    path('task-delete/<int:pk>/',DeleteView.as_view(),name='task-delete'),
+    path('calendar/', views.CalendarView.as_view(), name='calendar'),
 
 
 ]
