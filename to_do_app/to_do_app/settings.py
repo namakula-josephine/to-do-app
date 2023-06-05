@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-labx810sc3-&e_n(ba#9e83!@+n&$7+*0(6pypg@n+idtow&tq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
