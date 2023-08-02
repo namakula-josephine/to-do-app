@@ -16,7 +16,7 @@ class Task(models.Model):
     due  = models.DateTimeField(auto_now_add=False,auto_now=False,blank=True,null=True)
     time=models.TimeField( auto_now_add=False,auto_now=False,blank=True,null=True)
     
-    
+    location = models.TextField(null=True, blank=True)
     
     def __str__(self):
         return self.title
